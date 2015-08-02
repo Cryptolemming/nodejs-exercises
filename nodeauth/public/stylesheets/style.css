@@ -1,7 +1,8 @@
 body {
   width: 100%;
+  height: 100%;
   font: 30px Helvetica, sans-serif;
-  background: #fbfbfb;
+  background: #444;
   color: #333;
   font-style: bold;
   padding: 0;
@@ -14,7 +15,7 @@ a {
 }
 
 .navbar {
-	background: #666;
+	background: #333;
 	height: 50px;
 	padding: 0;
 	margin: 0;
@@ -28,7 +29,7 @@ a {
 
 #login-list {
 	margin-top: 0;
-	margin-right: 15px;
+	margin-right: 0px;
 	list-style-type: none;
 	float: right;
 }
@@ -39,7 +40,7 @@ a {
 	margin: 0 0;
 }
 
-.login {
+.btn-default {
 	padding: 5px;
 	text-align: center;
 	background: #508bd9;
@@ -53,6 +54,38 @@ a {
 	border: 0;
 }
 
-.login:hover {
+.btn-default:hover {
 	background: #205293;
+}
+
+.form-container {
+	width: 80%;
+	height: 100%;
+	margin: 0 auto;
+	background: #fbfbfb;
+	color: #333;
+	padding: 50px 25px;
+	margin-top: 0;
+	text-align: center;
+	text-align: justify;
+	font-size: 20px;
+}
+
+.form-group {
+	margin: 15px;
+}
+
+label {
+	font-size: 16px;
+	font-family: Georgia;
+	padding: 15px;
+}
+
+.form-control {
+	outline: none;
+	padding: 15px;
+}
+
+.submit {
+	background: #333;
 }

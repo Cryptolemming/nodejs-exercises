@@ -10,7 +10,7 @@ body {
 }
 
 a {
-  color: #00B7FF;
+  color: #205293;
   cursor: pointer;
 }
 
@@ -19,6 +19,7 @@ a {
 	height: 50px;
 	padding: 0;
 	margin: 0;
+	border-bottom: 3px solid #508bd9;
 }
 
 .title {
@@ -43,7 +44,7 @@ a {
 .btn-default {
 	padding: 5px;
 	text-align: center;
-	background: #508bd9;
+	background: transparent;
 	color: #fbfbfb;
 	height: 50px;
 	width: 100px;
@@ -55,7 +56,7 @@ a {
 }
 
 .btn-default:hover {
-	background: #205293;
+	background: #508bd9;
 }
 
 .form-container {

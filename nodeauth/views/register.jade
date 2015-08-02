@@ -3,6 +3,10 @@ extends layout
 block content
   .form-container
     p Please Register
+    ul.errors
+      if errors
+        each error, i in errors
+          li.alert #{error.msg}
     form(method='post', action='/users/register',enctype='multipart/form-data')
       .form-group
           label Name

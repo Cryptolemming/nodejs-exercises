@@ -1,6 +1,11 @@
 extends layout
 
 block content
-  h1 Title
-  p post
+	posts
+		each post, i in posts
+			h1.post-header=post.title
+			p.meta #{post.date}
+			=post.body
+			br
+			a.more(href='/posts/show/#{post.title}') Read More
 

@@ -1,0 +1,26 @@
+doctype html
+html
+	head
+		title NodeBlog
+		link(rel='stylesheet', href='/stylesheets/style.css')
+	body
+		.container
+			.left-column
+				.top-row
+					<!-- iframe(alt="video" width="100%" height="100%" frameborder='0' src="https://www.youtube.com/embed/Un5SEJ8MyPc?autoplay=1&wmode=opaque&controls=0&hd=1" allowfullscreen) --!>
+				.bottom-row
+					.logo
+					.nav
+						ul
+							li
+								a(href='/') Home
+							li
+								a(href='/posts/add') Add Post
+							li
+								a(href='/categories/add') Add Category
+					p.copyright Ali Ayoub &copy; 2015
+			.right-column
+				.main-content
+					!= messages()
+					block content
+			

@@ -62,12 +62,12 @@ a:hover {
 	font-size: 18px;
 }
 
-ul {
+.nav > ul {
 	list-style-type: none;
 	padding-left: 0;
 }
 
-li {
+.nav > ul > li {
 	padding: 5px;
 }
 
@@ -88,41 +88,109 @@ li {
 }
 
 .main-content {
-	width: 45vw;
+	width: 50vw;
 	margin: 5vh auto 0 auto;
 	font-size: 20px;
 	word-wrap: break-word;
 }
 
 .more {
-	float: right;
-	font-size: 15px;
+	color: rgba(0,0,0,.87);
 }
 
-.meta {
+.more:hover {
+	color: rgba(0,0,0,.87);
+	text-decoration: underline;
+}
+
+.fa-clock-o {
+	padding: 15px;
+}
+
+.date {
 	font-size: 15px;
-	margin: -25px 0 35px 0;
+	width: 25vw;
+	margin-top: -15px;
+}
+
+.date > i {
+	float: left;
+	margin-top: -13px;
+	padding-left: 0;
 }
 
 .post-header {
 	margin-top: 55px;
 }
 
+.post-body {
+	margin-top: 25px;
+}
+
 .sticky-icons {
 	bottom: 0;
 	position: absolute;
 	position: fixed;
+	font-size: 25px;
 }
 
 .sticky-list {
 	display: inline;
 	padding-left: 0;
+	list-style-type: none;
 }
 
 .sticky-list > li {
 	float: left;
+	padding: 10px;
+	margin-bottom: 25px;
+	background: #fafafa;
+	margin-left: -75px;
+}
+
+.sticky-list > li:first-child {
+	background: #448aff;
+	color: #fafafa;
+	border-radius: 50%;
 }
 
 .sticky-list > li:nth-child(2){
-	width: 54vw;
+	width: 60vw;
+	background: transparent;
+}
+
+.sticky-list > li:nth-child(3) {
+	color: rgba(0,0,0,.54);
+}
+
+.post {
+	padding-bottom: 20px;
+}
+
+label {
+	display: inline-block;
+	width: 180px;
+	margin: 15px 0;
+}
+
+input[type='text'], select, textarea {
+	padding: 5px;
+	margin: 10px 0;
+	height: 20px;
+	width: 200px;
+	border: 1px solid rgba(0,0,0,.12);
+	outline: none;
+}
+
+select {
+	height: 28px;
+}
+
+textarea {
+	height: 400px;
+	width: 600px;
+}
+
+.show {
+	width: 66vw;
 }

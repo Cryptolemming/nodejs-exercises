@@ -1,0 +1,18 @@
+extends layout
+
+block content
+	.show
+		h1.post-header=post.title
+		.date
+			i.fa.fa-clock-o
+			p.time #{moment(post.date).format('MM.DD.YYYY')}
+		img(src='/images/uploads/#{post.mainimage}')
+		.post-body=post.body
+		.sticky-icons
+			ul.sticky-list
+				li
+					i.fa.fa-heart
+				li
+				li
+					a(href='#')
+						i.fa.fa-arrow-up

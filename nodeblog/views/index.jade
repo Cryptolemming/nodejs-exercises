@@ -3,9 +3,15 @@ extends layout
 block content
 	posts
 		each post, i in posts
-			h1.post-header=post.title
-			p.meta #{post.date}
-			=post.body
-			br
-			a.more(href='/posts/show/#{post.title}') Read More
+				.post
+					a.more(href='/posts/show/#{post._id}')
+						h1.post-header=post.title
+					.date
+						i.fa.fa-clock-o
+						p.time #{moment(post.date).format('MM.DD.YYYY')}
+					img(src='/images/uploads/#{post.mainimage}')
+					.post-body!=post.body, 400
+
+
+
 

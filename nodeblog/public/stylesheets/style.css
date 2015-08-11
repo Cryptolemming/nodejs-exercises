@@ -1,5 +1,5 @@
 body {
-  font: 20px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 18px "Lucida Grande", Helvetica, Arial, sans-serif;
   color: rgba(0,0,0,.87);
   background: #fafafa;
   margin: 0;
@@ -11,16 +11,23 @@ body {
 }
 
 a {
-  color: rgba(0,0,0,.54);
-  text-decoration: none;
-  transition: color .3s ease0out;
-  -webkit-transition: color .3s ease-out;
-  -moz-transition: color .3s ease-out;
+	color: #0091ea;	
+	text-decoration: none;
+	transition: color .3s ease0out;
+	  -webkit-transition: color .3s ease-out;
+	  -moz-transition: color .3s ease-out;
 }
 
 a:hover {
-	color: #304ffe;
-	
+	text-decoration: underline;
+}
+
+h1 {
+	font-size: 30px;
+}
+
+p {
+	font-size: 20px;
 }
 
 .container {
@@ -40,7 +47,7 @@ a:hover {
 .top-row {
 	height: 50vh;
 	border-bottom: 2px solid rgba(0,0,0,.12);
-	background: #3F51B5;
+	background-color: #212121;
 }
 
 .bottom-row {
@@ -49,7 +56,7 @@ a:hover {
 }
 
 .logo {
-	background: #fafafa;
+	background-color: #0091ea;
 	width: 70px;
 	height: 100px;
 	border-radius: 50%;
@@ -68,7 +75,11 @@ a:hover {
 }
 
 .nav > ul > li {
-	padding: 5px;
+	margin: 15px;
+}
+
+.nav ul > li > a {
+	color: #212121 !important;
 }
 
 .copyright {
@@ -77,14 +88,14 @@ a:hover {
 	bottom: 5px;
 	position: absolute;
 	padding-left: 15px;
-	color: rgba(0,0,0,.54)
+	color: rgba(0,0,0,.87)
 }
 
 .right-column {
 	float: right;
 	margin: 0;
 	padding: 0;
-	width: 65vw;
+	width: 66vw;
 }
 
 .main-content {
@@ -96,6 +107,7 @@ a:hover {
 
 .more {
 	color: rgba(0,0,0,.87);
+	margin: 0 auto;
 }
 
 .more:hover {
@@ -111,6 +123,7 @@ a:hover {
 	font-size: 15px;
 	width: 25vw;
 	margin-top: -15px;
+	color: rgba(0,0,0,.54);
 }
 
 .date > i {
@@ -149,8 +162,8 @@ a:hover {
 }
 
 .sticky-list > li:first-child {
-	background: #448aff;
-	color: #fafafa;
+	background: #212121;
+	color: #039be5;
 	border-radius: 50%;
 }
 
@@ -159,8 +172,8 @@ a:hover {
 	background: transparent;
 }
 
-.sticky-list > li:nth-child(3) {
-	color: rgba(0,0,0,.54);
+.sticky-list > li:nth-child(3) > a {
+	color: rgba(0,0,0,.87);
 }
 
 .post {
@@ -191,6 +204,9 @@ textarea {
 	width: 600px;
 }
 
-.show {
-	width: 66vw;
+.post-img {
+	margin: 0 auto;
+	display: block;
+	border-radius: 50%;
+	max-width: 33vw;
 }

@@ -10,7 +10,6 @@ var session = require('express-session');
 var bodyParser = require('body-parser');
 var mongo = require('mongodb');
 var multer = require('multer');
-var upload = multer({ dest: './public/images/uploads' })
 var flash = require('connect-flash');
 
 // Database
@@ -18,15 +17,25 @@ var db = require('monk')('localhost/nodeblog');
 
 var routes = require('./routes/index');
 var posts = require('./routes/posts');
+var admin = require('./routes/admin');
 
 var app = express();
 
 // date format
 app.locals.moment = require('moment');
 
+// truncate Post preview text
+app.locals.truncateText = function(text, length){
+  var truncatedText = text.substring(0, length);
+  return truncatedText;
+}
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
+
+// Handle File Uploads & Multipart Data
+app.use(multer({ dest: './public/images/uploads'}));
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
@@ -77,6 +86,7 @@ app.use(function(req,res,next){
 
 app.use('/', routes);
 app.use('/posts', posts);
+app.use('/admin', admin);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
